@@ -1,0 +1,74 @@
+/* Thêm các style này vào cuối tệp style.css của bạn */
+
+.page-content-wrapper {
+    display: flex; /* Kích hoạt Flexbox */
+    gap: 20px; /* Khoảng cách giữa cột trái và nội dung chính */
+    padding: 0 20px; /* Khoảng đệm ngang cho toàn bộ khu vực nội dung */
+    margin-top: 20px; /* Khoảng cách với ảnh phía trên */
+    margin-bottom: 20px; /* Khoảng cách với footer phía dưới */
+}
+
+.sidebar-left {
+    flex-basis: 25%; /* Cột trái chiếm 25% chiều rộng */
+    /* Hoặc bạn có thể dùng chiều rộng cố định, ví dụ: width: 250px; */
+    padding: 20px;
+    background-color: #f8f9fa; /* Màu nền nhẹ cho cột trái */
+    border-radius: 8px; /* Bo tròn góc (tùy chọn) */
+    box-sizing: border-box; /* Đảm bảo padding và border không làm tăng kích thước tổng */
+}
+
+.sidebar-left h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+.sidebar-left ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 20px;
+}
+
+.sidebar-left ul:last-child {
+    margin-bottom: 0; /* Bỏ margin dưới cho danh sách cuối cùng trong sidebar */
+}
+
+.sidebar-left ul li a {
+    text-decoration: none;
+    color: #007bff;
+    display: block; /* Giúp toàn bộ mục danh sách có thể nhấp được */
+    padding: 6px 0; /* Thêm chút khoảng đệm cho liên kết */
+    transition: color 0.2s ease-in-out; /* Hiệu ứng chuyển màu khi hover (tùy chọn) */
+}
+
+.sidebar-left ul li a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+main {
+    flex-basis: 75%; /* Nội dung chính chiếm 75% chiều rộng */
+    /* Hoặc dùng flex-grow: 1; để nó tự chiếm không gian còn lại nếu cột trái có chiều rộng cố định */
+    padding: 0 15px; /* Thêm chút padding cho nội dung chính nếu cần */
+    box-sizing: border-box;
+}
+
+/* Điều chỉnh cho màn hình nhỏ (Responsive) */
+@media (max-width: 768px) {
+    .page-content-wrapper {
+        flex-direction: column; /* Xếp các cột chồng lên nhau */
+        padding: 0 10px;
+    }
+
+    .sidebar-left, main {
+        flex-basis: auto; /* Reset flex-basis */
+        width: 100%;    /* Mỗi thành phần chiếm toàn bộ chiều rộng */
+    }
+
+    .sidebar-left {
+        margin-bottom: 20px; /* Khoảng cách giữa cột trái và nội dung chính khi xếp chồng */
+        padding: 15px;
+    }
+}
