@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giao diện theo ảnh</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    .menu {
+      background-color: red;
+      color: white;
+      padding: 10px;
+    }
+    .banner {
+      background-color: aqua;
+      padding: 10px;
+      text-align: left;
+      position: relative;
+    }
+    .anh-con {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .anh1, .anh2, .anh3 {
+      width: 80px;
+      height: 60px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 5px;
+    }
+    .anh1 { background-color: #003333; }
+    .anh2 { background-color: #ff33ff; }
+    .anh3 { background-color: #33ff00; }
+
+    .section {
+      padding: 15px;
+      border-top: 5px solid #e0c0e0;
+    }
+    .section:nth-child(even) {
+      background-color: #ddd;
+    }
+    .section:nth-child(odd) {
+      background-color: #d99fd9;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">menu</div>
+
+  <div class="banner">
+    ảnh nền
+    <div class="anh-con">
+      <div class="anh1">anh1</div>
+      <div class="anh2">anh2</div>
+      <div class="anh3">anh3</div>
+    </div>
+  </div>
+
+  <div class="section">video</div>
+  <div class="section">Bài viết</div>
+  <div class="section">khác</div>
+
+</body>
+</html>

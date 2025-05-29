@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Layout Theo Hình</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left-column {
+      width: 25%;
+      background-color: #d93600; /* đỏ cam */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .left-column .menu {
+      padding: 20px;
+      color: white;
+      font-weight: bold;
+    }
+
+    .right-column {
+      width: 75%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      background-color: #00cc44; /* xanh lá */
+      padding: 20px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 20px;
+      color: black;
+      font-weight: bold;
+    }
+
+    .section:nth-child(1) { background-color: #0033cc; color: white; }  /* Blog của tôi */
+    .section:nth-child(2) { background-color: #ffff00; }                /* Giới thiệu */
+    .section:nth-child(3) { background-color: #ff33ff; }                /* Bài viết */
+    .section:nth-child(4) { background-color: #00e5ee; }                /* Kiến thức */
+    .section:nth-child(5) { background-color: #d3d3d3; }                /* Video */
+    .section:nth-child(6) { background-color: #111111; color: white; } /* Tiểu sử */
+
+  </style>
+</head>
+<body>
+
+  <div class="header">Ảnh nền</div>
+
+  <div class="container">
+    <div class="left-column">
+      <div class="menu">menu</div>
+    </div>
+
+    <div class="right-column">
+      <div class="section">Blog của tôi</div>
+      <div class="section">giới thiệu</div>
+      <div class="section">Bài viết</div>
+      <div class="section">kiến thức</div>
+      <div class="section">video</div>
+      <div class="section">Tiểu sử</div>
+    </div>
+  </div>
+
+</body>
+</html>
+
