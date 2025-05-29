@@ -4,38 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bài Viết Đầu Tiên Của Tôi - Blog Cá Nhân</title>
-    <!-- Giả sử bạn muốn dùng chung file style.css với trang chủ -->
-    <!-- Đường dẫn này cần được điều chỉnh cho đúng nếu style.css nằm ở thư mục gốc -->
-    <link rel="stylesheet" href="../style.css">
+    <!-- Thêm Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Thêm Alpine.js CDN (defer để tải sau khi HTML được phân tích) -->
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
-<body>
-    <header>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal">
+
+    <header class="bg-white shadow-md">
         <!-- Bạn có thể có một header nhỏ hơn ở đây hoặc một link quay lại trang chủ -->
-        <h1><a href="../index.html">Blog Cá Nhân</a></h1>
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-gray-800"><a href="../index.html" class="hover:text-blue-600">Blog Cá Nhân</a></h1>
+        </div>
     </header>
 
-    <main>
-        <article>
-            <h2>Bài Viết Đầu Tiên Của Tôi</h2>
-            <p class="post-meta">Đăng ngày: 01/01/2023</p>
+    <main class="container mx-auto px-6 py-8">
+        <article class="bg-white p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold text-gray-800 mb-2">Bài Viết Đầu Tiên Của Tôi</h2>
+            <p class="text-sm text-gray-600 mb-6">Đăng ngày: 01/01/2023</p>
             
-            <p>Đây là nội dung của bài viết đầu tiên trên blog của tôi. Thật thú vị khi bắt đầu hành trình chia sẻ này!</p>
-            <p>Bạn có thể viết về bất cứ điều gì bạn muốn ở đây: những suy nghĩ, kinh nghiệm, hướng dẫn, hoặc các dự án cá nhân.</p>
-            <p>Ví dụ, bạn có thể chia sẻ về:</p>
+            <div class="prose max-w-none"> <!-- Lớp 'prose' của Tailwind Typography cho định dạng văn bản đẹp -->
+                <p>Đây là nội dung của bài viết đầu tiên trên blog của tôi. Thật thú vị khi bắt đầu hành trình chia sẻ này!</p>
+                <p>Bạn có thể viết về bất cứ điều gì bạn muốn ở đây: những suy nghĩ, kinh nghiệm, hướng dẫn, hoặc các dự án cá nhân.</p>
+                <p>Ví dụ, bạn có thể chia sẻ về:</p>
+            </div>
               <!-- Thêm ảnh anh3 vào đây -->
-    <p>Đây là hình ảnh "anh3" mà bạn muốn thêm:</p>
-    <img src="../images/anh3.jpg" alt="Hình ảnh anh3 - mô tả chi tiết" class="article-image">
-            <ul>
+    <p class="mt-4 mb-2 text-gray-700">Đây là hình ảnh "anh3" mà bạn muốn thêm:</p>
+    <img src="../images/anh3.jpg" alt="Hình ảnh anh3 - mô tả chi tiết" class="my-4 rounded-lg shadow-md max-w-full h-auto mx-auto block">
+            <ul class="list-disc list-inside mt-4 mb-4 pl-4 text-gray-700">
                 <li>Lý do bạn bắt đầu blog này.</li>
                 <li>Chủ đề chính bạn sẽ viết.</li>
                 <li>Một chút về bản thân bạn.</li>
             </ul>
-            <p>Chúc bạn viết vui!</p>
+            <p class="text-gray-700">Chúc bạn viết vui!</p>
         </article>
     </main>
 
-    <footer>
-        <p>&copy; 2023 Xuân Dũng - <a href="../index.html">Quay lại trang chủ</a></p>
+    <footer class="bg-white border-t mt-8 py-6">
+        <div class="container mx-auto px-6 text-center text-gray-600 text-sm">
+            <p>&copy; 2023 Xuân Dũng - <a href="../index.html" class="text-blue-600 hover:underline">Quay lại trang chủ</a></p>
+        </div>
     </footer>
 
     <!-- Nếu bài viết này cần JavaScript riêng, bạn có thể thêm vào đây -->
