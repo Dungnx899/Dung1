@@ -17,8 +17,15 @@
             background-position: center center;
             background-repeat: no-repeat;
             min-height: 100vh; /* Đảm bảo body chiếm ít nhất toàn bộ chiều cao màn hình */
+            /* Thêm các thuộc tính flexbox để đẩy footer xuống dưới */
+            display: flex;
+            flex-direction: column;
             /* Bạn có thể đặt một màu nền mặc định ở đây */
             /* background-color: #f0f0f0; */
+        }
+        /* Đảm bảo main content có thể co giãn để đẩy footer xuống */
+        main {
+            flex-grow: 1;
         }
         /* CSS bổ sung cho nội dung trang chủ nếu cần */
         .content-overlay {
