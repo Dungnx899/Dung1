@@ -1,3 +1,19 @@
+/* CSS cho phần thân của trang (body) */
+body {
+    font-family: 'Arial', sans-serif; /* Font chữ chung cho trang */
+    margin: 0; /* Loại bỏ khoảng trắng mặc định xung quanh trang */
+    padding: 0; /* Loại bỏ khoảng đệm mặc định */
+    background-color: #f0f0f0; /* Màu nền dự phòng nếu ảnh không tải được */
+    color: #333; /* Màu chữ mặc định */
+
+    /* --- THIẾT LẬP ẢNH NỀN --- */
+    /* Thay 'ten-file-anh-nen-cua-ban.jpg' bằng tên file ảnh thực tế của bạn trong thư mục 'images' */
+    background-image: url('../images/anhnen.jpg');
+    background-size: cover; /* Đảm bảo ảnh nền che phủ toàn bộ khu vực */
+    background-repeat: no-repeat; /* Không lặp lại ảnh nền */
+    background-position: center center; /* Căn giữa ảnh nền */
+    background-attachment: fixed; /* Giữ ảnh nền cố định khi cuộn trang */
+}
 /* Thêm các style này vào cuối tệp style.css của bạn */
 
 .page-content-wrapper {
