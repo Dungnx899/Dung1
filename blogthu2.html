@@ -30,19 +30,21 @@
             color: #212529;
         }
         .blog-post-alt img.post-image { /* Style cho ảnh trong bài viết */
-            max-width: 250px; /* Giảm kích thước tối đa của ảnh xuống 250px, bạn có thể điều chỉnh giá trị này */
+            max-width: 250px; /* Kích thước tối đa của ảnh */
             height: auto; /* Giữ tỷ lệ khung hình của ảnh */
-            /* display: block;  Không cần thiết khi dùng flexbox cho gallery */
-            /* margin: 15px auto; Sẽ được xử lý bởi flex container hoặc gap */
+            display: block; /* Hiển thị ảnh dưới dạng block để xếp chồng theo chiều dọc */
+            margin-left: auto; /* Căn giữa ảnh khi là block */
+            margin-right: auto; /* Căn giữa ảnh khi là block */
             border-radius: 5px; /* Bo góc nhẹ cho ảnh (tùy chọn) */
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Thêm bóng đổ nhẹ (tùy chọn) */
-            margin-bottom: 10px; /* Thêm khoảng cách dưới cho mỗi ảnh nếu chúng wrap */
+            margin-bottom: 10px; /* Khoảng cách dưới mỗi ảnh trong chồng */
         }
         .image-gallery { /* Style cho container chứa các ảnh */
-            display: flex;
-            flex-wrap: wrap; /* Cho phép các ảnh xuống dòng nếu không đủ chỗ */
-            gap: 10px; /* Khoảng cách giữa các ảnh */
-            justify-content: center; /* Căn giữa các ảnh trong container */
+            /* Thuộc tính flex đã được loại bỏ để các ảnh xếp chồng theo chiều dọc */
+            /* display: flex; */
+            /* flex-wrap: wrap; */
+            /* gap: 10px; */
+            /* justify-content: center; */
             margin-top: 15px;
             margin-bottom: 15px;
         }
