@@ -1,7 +1,7 @@
 body {
     /* Thay 'url("path/to/your/image.jpg")' bằng đường dẫn thực tế đến ảnh của bạn
        Hoặc URL của ảnh trực tuyến, ví dụ: 'url("https://example.com/background.jpg")' */
-    background-image: url("images/anhnen.jpg");
+    background-image: url("images/anh nen.jpg");
 
     /* Các thuộc tính tùy chọn khác để kiểm soát ảnh nền: */
 
