@@ -29,6 +29,14 @@
             line-height: 1.7;
             color: #212529;
         }
+        .blog-post-alt img.post-image { /* Style cho ảnh trong bài viết */
+            max-width: 100%; /* Ảnh sẽ không vượt quá chiều rộng của bài viết */
+            height: auto; /* Giữ tỷ lệ khung hình của ảnh */
+            display: block; /* Để có thể căn giữa bằng margin */
+            margin: 15px auto; /* Căn giữa ảnh và tạo khoảng cách trên dưới */
+            border-radius: 5px; /* Bo góc nhẹ cho ảnh (tùy chọn) */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Thêm bóng đổ nhẹ (tùy chọn) */
+        }
         .view-details-link {
             display: inline-block;
             margin-top: 12px;
@@ -52,19 +60,26 @@
 
     <div class="page-content-wrapper">
         <main style="flex-basis: 100%;"> {/* Cho main chiếm toàn bộ nếu không có sidebar ở trang này */}
-            <h2>Nội dung trang Blog Mẫu 2</h2>
+            <h2>Nhà đẹp Hà Nội </i></h2>
 
             <article class="blog-post-alt">
                 <h3>Chủ đề nổi bật trong Mẫu 2</h3>
                 <p class="post-meta">Cập nhật: 03/06/2025 - Tác giả: Admin</p>
-                <p>Đây là nội dung ví dụ cho một bài viết hoặc một phần thông tin trên trang blog theo Mẫu 2. Giao diện này có thể được tùy chỉnh với màu sắc và bố cục khác biệt để tạo sự đa dạng cho blog của bạn. Hãy thử nghiệm với các khối văn bản, hình ảnh và các yếu tố khác.</p>
-                <a href="#" class="view-details-link">Xem chi tiết</a>
+                <p>Khi bạn sống chậm lại, từng nhịp thở cũng mang ý nghĩa. Một tách cà phê đậm đà, một ánh mắt nồng ấm, hay chỉ là phút giây ngồi lặng yên nghe tiếng gió.
+Tất cả đều là những điều giản dị nhưng đầy giá trị, chỉ cần bạn đủ tĩnh lặng để cảm nhận. 
+An yên không phải là sự tĩnh lặng tuyệt đối, mà là biết mỉm cười dù trong lòng vẫn còn gió nổi.
             </article>
 
             <article class="blog-post-alt">
-                <h3>Một góc nhìn khác</h3>
+                <h3>!!Thụy Sỹ</h3>
                 <p class="post-meta">Cập nhật: 02/06/2025 - Tác giả: Khách mời</p>
-                <p>Mỗi mẫu giao diện mang đến một trải nghiệm đọc khác nhau. Mẫu 2 tập trung vào sự rõ ràng và có thể phù hợp với các bài viết dài, phân tích chuyên sâu hoặc các dạng nội dung cần sự tập trung cao độ từ người đọc. Bạn có thể thêm nhiều bài viết hơn nữa vào đây.</p>
+                <!-- Thêm ảnh vào đây -->
+                <img src="images/thuysy1.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
+                <img src="images/thuysy2.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
+                <img src="images/thuysy3.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
+                <img src="images/thuysy4.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
+                <img src="images/thuysy5.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
+                <p>Thuỵ Sĩ: Cả ngôi làng bị chôn vùi, phá hủy trong chớp mắt vì sông băng tan chảy, tạo thành lũ bùn.</p>
                 <a href="#" class="view-details-link">Xem chi tiết</a>
             </article>
 
