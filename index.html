@@ -25,7 +25,7 @@
         }
         /* Đảm bảo main content có thể co giãn để đẩy footer xuống */
         main {
-            flex-grow: 3;
+            flex-grow: 1;
         }
         /* CSS bổ sung cho nội dung trang chủ nếu cần */
         .content-overlay {
@@ -53,7 +53,7 @@
     </header>
 
     <main class="container mx-auto px-6 py-8">
-        <div class="text-center content-overlay">
+        <div class="text-center content-overlay mb-8"> {/* Thêm khoảng cách dưới cho phần chào mừng */}
             <h2 class="text-4xl font-bold text-gray-800 mb-4">Chào Mừng Bạn Đến Với Blog!</h2>
             <p class="text-lg text-gray-700 mb-6">
                 Nơi chia sẻ những kiến thức, kinh nghiệm và câu chuyện thú vị.
@@ -65,6 +65,35 @@
                 <a href="posts/blogthu3.html" class="text-blue-600 hover:underline px-3">Blog thứ 3</a>
                 <a href="posts/du-lich-da-lat.html" class="text-blue-600 hover:underline px-3">Du-lich-da-lat</a>
                 
+        </div>
+
+        <!-- Khu vực 3 cột mới -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="content-overlay shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Cột 1: Nội dung nổi bật</h3>
+                <p class="text-gray-700 text-sm">
+                    Đây là nơi bạn có thể đặt các bài viết nổi bật, thông tin quan trọng hoặc bất kỳ nội dung nào bạn muốn làm nổi bật ở cột đầu tiên.
+                </p>
+                <a href="#" class="text-blue-600 hover:underline mt-4 inline-block text-sm">Đọc thêm...</a>
+            </div>
+            <div class="content-overlay shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Cột 2: Chuyên mục</h3>
+                <p class="text-gray-700 text-sm">
+                    Cột thứ hai có thể dùng để liệt kê các chuyên mục chính của blog, các liên kết hữu ích, hoặc thông tin giới thiệu ngắn gọn.
+                </p>
+                <ul class="mt-3 list-disc list-inside text-gray-700 text-sm">
+                    <li><a href="#" class="hover:underline">Công nghệ</a></li>
+                    <li><a href="#" class="hover:underline">Đời sống</a></li>
+                    <li><a href="#" class="hover:underline">Du lịch</a></li>
+                </ul>
+            </div>
+            <div class="content-overlay shadow-md">
+                <h3 class="text-xl font-semibold text-gray-800 mb-3">Cột 3: Về tác giả</h3>
+                <p class="text-gray-700 text-sm">Sử dụng cột này để giới thiệu về bản thân, hoặc những dự án bạn đang thực hiện. Bạn có thể thêm ảnh đại diện nếu muốn.</p>
+                <!-- Ví dụ ảnh đại diện, thay 'images/avatar.jpg' bằng đường dẫn ảnh của bạn -->
+                <!-- <img src="images/avatar.jpg" alt="Ảnh đại diện" class="w-24 h-24 rounded-full mx-auto my-3"> -->
+                <p class="text-center text-gray-600 mt-3 font-semibold">Xuân Dũng</p>
+            </div>
         </div>
     </main>
 
