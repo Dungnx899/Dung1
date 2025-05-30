@@ -80,13 +80,43 @@
 
         <!-- Khu vực 3 cột mới -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="content-overlay shadow-md">
+            <div class="content-overlay shadow-md p-4"> {/* Thêm padding p-4 cho cột */}
                 <h3 class="text-xl font-semibold text-gray-800 mb-3">Demo Giao Diện Blog (Mẫu 2)</h3>
                 <p class="text-gray-700 text-sm">
                     Khám phá một mẫu giao diện blog khác với bố cục hiện đại, tập trung vào trình bày bài viết và bộ sưu tập hình ảnh một cách hấp dẫn.
                     Lý tưởng để chia sẻ những câu chuyện và khoảnh khắc đáng nhớ.
                 </p>
-                <a href="blogthu2.html" class="text-blue-600 hover:underline mt-4 inline-block text-sm font-semibold">Xem Demo Mẫu 2 &rarr;</a>
+                <a href="blogthu2.html" class="text-blue-600 hover:underline inline-block text-sm font-semibold mb-6">Xem Demo Mẫu 2 &rarr;</a> {/* Thêm mb-6 */}
+
+                <!-- Phần Tương tác: Thích, Không thích, Bình luận -->
+                <div class="mt-auto border-t pt-4"> {/* mt-auto để đẩy xuống cuối cột nếu cột có chiều cao cố định, border-t để tạo đường kẻ ngang */}
+                    <div class="flex items-center justify-start space-x-4 mb-4">
+                        <button class="flex items-center text-green-500 hover:text-green-700 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.865 2.4z" />
+                            </svg>
+                            Thích
+                            <span class="ml-1 text-xs text-gray-600">(123)</span> <!-- Số lượt thích (ví dụ) -->
+                        </button>
+                        <button class="flex items-center text-red-500 hover:text-red-700 focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M18 9.5a1.5 1.5 0 11-3 0v-6a1.5 1.5 0 013 0v6zM14 9.667v-5.43a2 2 0 00-1.106-1.79l-.05-.025A4 4 0 0011.057 2H5.642a2 2 0 00-1.962 1.608l-1.2 6A2 2 0 004.44 12H8v4a2 2 0 002 2 1 1 0 001-1v-.667a4 4 0 01.8-2.4l2.2-2.867a4 4 0 00.865-2.4z" />
+                            </svg>
+                            Không thích
+                            <span class="ml-1 text-xs text-gray-600">(10)</span> <!-- Số lượt không thích (ví dụ) -->
+                        </button>
+                    </div>
+
+                    <h4 class="text-md font-semibold text-gray-800 mb-2">Bình luận (2)</h4>
+                    <div class="space-y-3 mb-4 text-sm">
+                        <div class="bg-gray-100 p-2 rounded-md"><strong>Người dùng A:</strong> Đây là một demo rất hay!</div>
+                        <div class="bg-gray-100 p-2 rounded-md"><strong>Người dùng B:</strong> Giao diện đẹp, dễ sử dụng.</div>
+                    </div>
+                    <textarea class="w-full p-2 border rounded-md text-sm focus:ring-blue-500 focus:border-blue-500" rows="2" placeholder="Viết bình luận của bạn..."></textarea>
+                    <button class="mt-2 bg-blue-500 hover:bg-blue-700 text-white text-sm font-semibold py-1 px-3 rounded focus:outline-none focus:shadow-outline">
+                        Gửi bình luận
+                    </button>
+                </div>
             </div>
             <div class="content-overlay shadow-md">
                 <h3 class="text-xl font-semibold text-gray-800 mb-3">Cột 2: Chuyên mục</h3>
