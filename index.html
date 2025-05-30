@@ -53,6 +53,23 @@
             0%   { transform: translateX(0); }
             100% { transform: translateX(-100%); } /* Di chuyển sang trái bằng chính tổng chiều rộng của nó (bao gồm padding) */
         }
+
+        /* CSS cho hiệu ứng quảng cáo chạy */
+        .advertisement-banner-container {
+            /* Tailwind classes sẽ xử lý màu nền, màu chữ, padding, overflow, whitespace-nowrap */
+            /* Đảm bảo nó chiếm toàn bộ chiều rộng nếu cần */
+        }
+
+        .advertisement-banner-container .advertisement-text {
+            /* display: inline-block; đã được Tailwind xử lý qua class 'inline-block' */
+            padding-left: 100%; /* Đẩy chữ bắt đầu từ bên phải của container */
+            animation: marquee-advertisement 25s linear infinite; /* Điều chỉnh 25s để thay đổi tốc độ */
+        }
+
+        @keyframes marquee-advertisement {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); } /* Di chuyển sang trái bằng chính tổng chiều rộng của nó (bao gồm padding) */
+        }
     </style>
 </head>
 <body class="font-sans leading-normal tracking-normal">
@@ -70,6 +87,13 @@
             </nav>
         </div>
     </header>
+
+    <!-- Dải quảng cáo chạy -->
+    <div class="bg-yellow-400 text-black p-2 overflow-hidden whitespace-nowrap advertisement-banner-container">
+        <span class="advertisement-text inline-block">
+            🎉 Ưu đãi đặc biệt! Giảm giá 50% cho tất cả các sản phẩm chỉ trong hôm nay! Mua ngay kẻo lỡ! 🚀 Truy cập [Tên Website/Link Sản Phẩm] để biết thêm chi tiết! 🎉
+        </span>
+    </div>
 
     <main class="container mx-auto px-6 py-8">
         <!-- Khu vực Chào Mừng với Avatar -->
