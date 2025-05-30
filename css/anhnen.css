@@ -41,3 +41,20 @@ main {
     margin: 20px; /* Thêm khoảng cách để không bị sát viền */
 }
 */
+body::before {
+    content: "";
+    position: fixed; /* Hoặc absolute tùy theo body có position relative không */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ màu đen mờ 50% */
+    z-index: -1; /* Đảm bảo lớp phủ nằm sau nội dung */
+}
+
+body {
+    position: relative; /* Cần thiết nếu dùng position:absolute cho ::before */
+    background-image: url("images/anh nen.jpg");
+    /* ... các thuộc tính background khác ... */
+    z-index: 0;
+}
