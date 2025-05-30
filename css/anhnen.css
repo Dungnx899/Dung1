@@ -1,0 +1,43 @@
+body {
+    /* Thay 'url("path/to/your/image.jpg")' bằng đường dẫn thực tế đến ảnh của bạn
+       Hoặc URL của ảnh trực tuyến, ví dụ: 'url("https://example.com/background.jpg")' */
+    background-image: url("images/anhnen.jpg");
+
+    /* Các thuộc tính tùy chọn khác để kiểm soát ảnh nền: */
+
+    /* Ngăn ảnh nền lặp lại nếu ảnh nhỏ hơn kích thước màn hình */
+    background-repeat: no-repeat;
+
+    /* Căn chỉnh ảnh nền ở giữa */
+    background-position: center center;
+
+    /* Cố định ảnh nền khi cuộn trang */
+    background-attachment: fixed;
+
+    /* Điều chỉnh kích thước ảnh nền để che phủ toàn bộ phần tử */
+    /* 'cover' sẽ đảm bảo ảnh che phủ toàn bộ, có thể cắt bớt một phần ảnh */
+    /* 'contain' sẽ đảm bảo toàn bộ ảnh được hiển thị, có thể để lại khoảng trống */
+    background-size: cover;
+
+    /* Bạn cũng có thể đặt màu nền dự phòng nếu ảnh không tải được */
+    background-color: #f0f0f0; /* Màu xám nhạt */
+
+    /* Để đảm bảo nội dung dễ đọc trên ảnh nền, bạn có thể cần điều chỉnh màu chữ */
+    color: #333; /* Màu chữ tối, nếu nền sáng */
+    /* color: #fff; */ /* Màu chữ sáng, nếu nền tối */
+}
+
+/* Bạn cũng có thể áp dụng ảnh nền cho các phần tử cụ thể khác, ví dụ: */
+/*
+header {
+    background-image: url("path/to/your/header-background.jpg");
+    background-size: cover;
+    color: white;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.8); /* Nền trắng bán trong suốt cho phần nội dung chính để dễ đọc hơn */
+    padding: 20px;
+    margin: 20px; /* Thêm khoảng cách để không bị sát viền */
+}
+*/
