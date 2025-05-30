@@ -92,6 +92,21 @@
             setBodyBackground(); // Đặt ảnh nền đầu tiên khi tải trang
             setInterval(setBodyBackground, 15000); // Thay đổi ảnh nền mỗi 15 giây (15000 mili giây)
         });
+
+        // Thêm đoạn mã này để xử lý việc phát nhạc khi người dùng tương tác
+        // document.addEventListener('DOMContentLoaded', function() {
+        //     var myAudio = document.getElementById('background-audio');
+        //     // Cố gắng phát nhạc sau khi người dùng tương tác lần đầu (ví dụ: click)
+        //     // document.body.addEventListener('click', function() {
+        //     //     myAudio.play().catch(error => console.log("Autoplay prevented: ", error));
+        //     // }, { once: true }); // { once: true } để sự kiện chỉ kích hoạt một lần
+        // });
     </script>
+    <!-- Thêm thẻ audio để nhúng nhạc -->
+    <!-- Thay 'audio/nhacnen.mp3' bằng đường dẫn đến file nhạc của bạn -->
+    <!-- Thuộc tính 'autoplay' để tự động phát, 'controls' để hiển thị điều khiển, 'loop' để lặp lại -->
+    <audio id="background-audio" src="audio/Tái Sinh - Tùng Dương - Bài hát, lyrics.mp3" autoplay controls loop style="display:none;">
+        Trình duyệt của bạn không hỗ trợ phát âm thanh.
+    </audio>
 </body>
 </html>
