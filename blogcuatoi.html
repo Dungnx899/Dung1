@@ -1,71 +1,72 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giao diện theo ảnh</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: sans-serif;
-    }
-    .menu {
-      background-color: red;
-      color: white;
-      padding: 10px;
-    }
-    .banner {
-      background-color: aqua;
-      padding: 10px;
-      text-align: left;
-      position: relative;
-    }
-    .anh-con {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .anh1, .anh2, .anh3 {
-      width: 80px;
-      height: 60px;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 5px;
-    }
-    .anh1 { background-color: #003333; }
-    .anh2 { background-color: #ff33ff; }
-    .anh3 { background-color: #33ff00; }
-
-    .section {
-      padding: 15px;
-      border-top: 5px solid #e0c0e0;
-    }
-    .section:nth-child(even) {
-      background-color: #ddd;
-    }
-    .section:nth-child(odd) {
-      background-color: #d99fd9;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Giao Diện Blog (Mẫu 1) - Blog Xuân Dũng</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Thêm một chút style riêng cho trang này nếu cần */
+        .blog-post {
+            background-color: #fff; /* Nền trắng cho mỗi bài viết */
+            padding: 20px;
+            margin-bottom: 20px; /* Khoảng cách giữa các bài viết */
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Thêm bóng đổ nhẹ */
+        }
+        .blog-post h3 {
+            margin-top: 0;
+            color: #007bff;
+        }
+        .blog-post .post-meta {
+            font-size: 0.9em;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        .blog-post p {
+            line-height: 1.6;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Blog Xuân Dũng - Demo Mẫu 1</h1>
+        <p><a href="index.html" style="color: inherit;">Quay lại trang chủ</a></p>
+    </header>
 
-  <div class="menu">menu</div>
+    <div class="page-content-wrapper">
+        <main style="flex-basis: 100%;"> {/* Cho main chiếm toàn bộ nếu không có sidebar ở trang này */}
+            <h2>Các Bài Viết Mẫu</h2>
 
-  <div class="banner">
-    ảnh nền
-    <div class="anh-con">
-      <div class="anh1">anh1</div>
-      <div class="anh2">anh2</div>
-      <div class="anh3">anh3</div>
+            <article class="blog-post">
+                <h3>Tiêu đề bài viết mẫu số 1</h3>
+                <p class="post-meta">Đăng ngày: 03/06/2025 bởi Xuân Dũng</p>
+                <p>Đây là một đoạn văn bản trích dẫn ngắn cho bài viết mẫu đầu tiên. Bạn có thể viết nội dung chi tiết hơn về chủ đề bạn muốn chia sẻ ở đây. Ví dụ, một câu chuyện, một hướng dẫn, hoặc một bài phân tích...</p>
+                <a href="#" class="read-more">Đọc thêm &raquo;</a>
+            </article>
+
+            <article class="blog-post">
+                <h3>Khám phá vẻ đẹp tiềm ẩn của Lập Trình</h3>
+                <p class="post-meta">Đăng ngày: 01/06/2025 bởi Xuân Dũng</p>
+                <p>Lập trình không chỉ là những dòng mã khô khan. Đó là một nghệ thuật, một công cụ để sáng tạo và giải quyết vấn đề. Bài viết này sẽ đưa bạn vào một hành trình khám phá những khía cạnh thú vị của thế giới lập trình mà có thể bạn chưa biết.</p>
+                <a href="#" class="read-more">Đọc thêm &raquo;</a>
+            </article>
+
+        </main>
     </div>
-  </div>
 
-  <div class="section">video</div>
-  <div class="section">Bài viết</div>
-  <div class="section">khác</div>
-
+    <footer>
+        <p>&copy; 2025 Xuân Dũng</p>
+    </footer>
 </body>
 </html>
