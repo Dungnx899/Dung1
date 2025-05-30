@@ -32,6 +32,23 @@
         .back-to-home:hover {
             text-decoration: underline;
         }
+        .generic-back-button {
+            display: block;
+            width: fit-content;
+            margin: 10px auto 20px auto;
+            padding: 10px 20px;
+            background-color: #6c757d; /* Màu xám trung tính */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.95em;
+        }
+        .generic-back-button:hover {
+            background-color: #5a6268;
+        }
     </style>
 </head>
 <body>
@@ -59,6 +76,10 @@
         <p>Hãy bắt đầu hành trình của bạn ngay hôm nay!</p>
 
         <a href="../index.html" class="back-to-home">&larr; Quay lại trang chủ</a>
+        
+        <!-- Nút Quay lại trang trước -->
+        <button onclick="history.back()" class="generic-back-button">&larr; Quay lại trang trước</button>
+
     </div>
 
     <footer>
