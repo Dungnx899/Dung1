@@ -32,10 +32,19 @@
         .blog-post-alt img.post-image { /* Style cho ảnh trong bài viết */
             max-width: 250px; /* Giảm kích thước tối đa của ảnh xuống 250px, bạn có thể điều chỉnh giá trị này */
             height: auto; /* Giữ tỷ lệ khung hình của ảnh */
-            display: block; /* Để có thể căn giữa bằng margin */
-            margin: 15px auto; /* Căn giữa ảnh và tạo khoảng cách trên dưới */
+            /* display: block;  Không cần thiết khi dùng flexbox cho gallery */
+            /* margin: 15px auto; Sẽ được xử lý bởi flex container hoặc gap */
             border-radius: 5px; /* Bo góc nhẹ cho ảnh (tùy chọn) */
             box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Thêm bóng đổ nhẹ (tùy chọn) */
+            margin-bottom: 10px; /* Thêm khoảng cách dưới cho mỗi ảnh nếu chúng wrap */
+        }
+        .image-gallery { /* Style cho container chứa các ảnh */
+            display: flex;
+            flex-wrap: wrap; /* Cho phép các ảnh xuống dòng nếu không đủ chỗ */
+            gap: 10px; /* Khoảng cách giữa các ảnh */
+            justify-content: center; /* Căn giữa các ảnh trong container */
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
         .view-details-link {
             display: inline-block;
@@ -73,13 +82,15 @@ An yên không phải là sự tĩnh lặng tuyệt đối, mà là biết mỉm
             <article class="blog-post-alt">
                 <h3>!!Thụy Sỹ</h3>
                 <p class="post-meta">Cập nhật: 02/06/2025 - Tác giả: Khách mời</p>
-                <!-- Thêm ảnh vào đây -->
-                 <p>Thuỵ Sĩ: Cả ngôi làng bị chôn vùi, phá hủy trong chớp mắt vì sông băng tan chảy, tạo thành lũ bùn.</p>
-                <img src="images/thuysy1.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
-                <img src="images/thuysy2.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
-                <img src="images/thuysy3.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
-                <img src="images/thuysy4.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
-                <img src="images/thuysy5.jpg" alt="Phong cảnh Thụy Sỹ" class="post-image">
+                <!-- Container cho các ảnh -->
+                <div class="image-gallery">
+                    <img src="images/thuysy1.jpg" alt="Phong cảnh Thụy Sỹ 1" class="post-image">
+                    <img src="images/thuysy2.jpg" alt="Phong cảnh Thụy Sỹ 2" class="post-image">
+                    <img src="images/thuysy3.jpg" alt="Phong cảnh Thụy Sỹ 3" class="post-image">
+                    <img src="images/thuysy4.jpg" alt="Phong cảnh Thụy Sỹ 4" class="post-image">
+                    <img src="images/thuysy5.jpg" alt="Phong cảnh Thụy Sỹ 5" class="post-image">
+                </div>
+                <p>Thuỵ Sĩ: Cả ngôi làng bị chôn vùi, phá hủy trong chớp mắt vì sông băng tan chảy, tạo thành lũ bùn.</p>
                 <a href="#" class="view-details-link">Xem chi tiết</a>
             </article>
 
