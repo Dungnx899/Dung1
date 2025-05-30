@@ -1,86 +1,78 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trang Layout Theo Hình</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: row;
-    }
-
-    .left-column {
-      width: 25%;
-      background-color: #d93600; /* đỏ cam */
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-    }
-
-    .left-column .menu {
-      padding: 20px;
-      color: white;
-      font-weight: bold;
-    }
-
-    .right-column {
-      width: 75%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .header {
-      background-color: #00cc44; /* xanh lá */
-      padding: 20px;
-      color: black;
-      font-weight: bold;
-    }
-
-    .section {
-      padding: 20px;
-      color: black;
-      font-weight: bold;
-    }
-
-    .section:nth-child(1) { background-color: #0033cc; color: white; }  /* Blog của tôi */
-    .section:nth-child(2) { background-color: #ffff00; }                /* Giới thiệu */
-    .section:nth-child(3) { background-color: #ff33ff; }                /* Bài viết */
-    .section:nth-child(4) { background-color: #00e5ee; }                /* Kiến thức */
-    .section:nth-child(5) { background-color: #d3d3d3; }                /* Video */
-    .section:nth-child(6) { background-color: #111111; color: white; } /* Tiểu sử */
-
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Giao Diện Blog (Mẫu 2) - Blog Xuân Dũng</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Các style này có thể giống hoặc khác với blogcuatoi.html */
+        /* Bạn có thể copy style từ blogcuatoi.html hoặc tạo style mới */
+        .blog-post-alt { /* Sử dụng class khác để có thể style riêng nếu muốn */
+            background-color: #e9ecef; /* Một màu nền khác cho bài viết ở mẫu 2 */
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 5px;
+            border-left: 5px solid #007bff; /* Thêm một đường viền trái để khác biệt */
+        }
+        .blog-post-alt h3 {
+            margin-top: 0;
+            color: #343a40;
+        }
+        .blog-post-alt .post-meta {
+            font-size: 0.85em;
+            color: #495057;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+        .blog-post-alt p {
+            line-height: 1.7;
+            color: #212529;
+        }
+        .view-details-link {
+            display: inline-block;
+            margin-top: 12px;
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .view-details-link:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1>Blog Xuân Dũng - Demo Mẫu 2</h1>
+        <p><a href="index.html" style="color: inherit;">Quay lại trang chủ</a></p>
+    </header>
 
-  <div class="header">Ảnh nền</div>
+    <div class="page-content-wrapper">
+        <main style="flex-basis: 100%;"> {/* Cho main chiếm toàn bộ nếu không có sidebar ở trang này */}
+            <h2>Nội dung trang Blog Mẫu 2</h2>
 
-  <div class="container">
-    <div class="left-column">
-      <div class="menu">menu</div>
+            <article class="blog-post-alt">
+                <h3>Chủ đề nổi bật trong Mẫu 2</h3>
+                <p class="post-meta">Cập nhật: 03/06/2025 - Tác giả: Admin</p>
+                <p>Đây là nội dung ví dụ cho một bài viết hoặc một phần thông tin trên trang blog theo Mẫu 2. Giao diện này có thể được tùy chỉnh với màu sắc và bố cục khác biệt để tạo sự đa dạng cho blog của bạn. Hãy thử nghiệm với các khối văn bản, hình ảnh và các yếu tố khác.</p>
+                <a href="#" class="view-details-link">Xem chi tiết</a>
+            </article>
+
+            <article class="blog-post-alt">
+                <h3>Một góc nhìn khác</h3>
+                <p class="post-meta">Cập nhật: 02/06/2025 - Tác giả: Khách mời</p>
+                <p>Mỗi mẫu giao diện mang đến một trải nghiệm đọc khác nhau. Mẫu 2 tập trung vào sự rõ ràng và có thể phù hợp với các bài viết dài, phân tích chuyên sâu hoặc các dạng nội dung cần sự tập trung cao độ từ người đọc. Bạn có thể thêm nhiều bài viết hơn nữa vào đây.</p>
+                <a href="#" class="view-details-link">Xem chi tiết</a>
+            </article>
+
+        </main>
     </div>
 
-    <div class="right-column">
-      <div class="section">Blog của tôi</div>
-      <div class="section">giới thiệu</div>
-      <div class="section">Bài viết</div>
-      <div class="section">kiến thức</div>
-      <div class="section">video</div>
-      <div class="section">Tiểu sử</div>
-    </div>
-  </div>
-
+    <footer>
+        <p>&copy; 2025 Xuân Dũng - Mẫu 2</p>
+    </footer>
 </body>
 </html>
-
