@@ -33,13 +33,32 @@
             padding: 20px;
             border-radius: 8px;
         }
+
+        /* CSS cho hiệu ứng chữ chạy (marquee) */
+        #marquee-h1 {
+            width: 100%; /* Đảm bảo h1 chiếm toàn bộ chiều rộng có sẵn */
+            overflow: hidden; /* Ẩn phần chữ chạy ra ngoài */
+            white-space: nowrap; /* Ngăn h1 tự xuống dòng nếu span quá rộng */
+            box-sizing: border-box;
+        }
+
+        #marquee-h1 .marquee-h1-text {
+            display: inline-block;
+            padding-left: 100%; /* Đẩy chữ bắt đầu từ bên phải của container h1 */
+            animation: marquee-animation-h1 15s linear infinite;
+            white-space: nowrap; /* Đảm bảo bản thân text không bị xuống dòng */
+        }
+
+        @keyframes marquee-animation-h1 {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-100%); } /* Di chuyển sang trái bằng chính tổng chiều rộng của nó (bao gồm padding) */
+        }
     </style>
 </head>
 <body class="font-sans leading-normal tracking-normal">
-
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-6 py-4">
-            <h1 class="text-3xl font-bold text-gray-800">Blog Cá Nhân Của Xuân Dũng</h1>
+            <h1 class="text-3xl font-bold text-gray-800" id="marquee-h1"><span class="marquee-h1-text">Blog Cá Nhân Của Xuân Dũng</span></h1>
             <nav class="mt-2">
                 <a href="index.html" class="text-blue-600 hover:underline px-3">Trang Chủ</a>
                 <!-- Thêm link đến các bài viết hoặc trang khác nếu có -->
