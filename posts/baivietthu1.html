@@ -8,6 +8,17 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <!-- Thêm Alpine.js CDN (defer để tải sau khi HTML được phân tích) -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <style>
+        body {
+            /* Hiệu ứng chuyển đổi mượt mà cho ảnh nền */
+            transition: background-image 1s ease-in-out;
+            /* Đảm bảo ảnh nền che phủ toàn bộ, căn giữa và không lặp lại */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 100vh; /* Đảm bảo body chiếm ít nhất toàn bộ chiều cao màn hình */
+        }
+    </style>
 </head>
 <body class="bg-gray-100 font-sans leading-normal tracking-normal">
 
@@ -61,5 +72,35 @@
 
     <!-- Nếu bài viết này cần JavaScript riêng, bạn có thể thêm vào đây -->
     <!-- <script src="../script-post.js"></script> -->
+
+    <script>
+        // Danh sách các ảnh nền bạn muốn sử dụng
+        // Hãy đảm bảo đường dẫn đến ảnh là chính xác.
+        // Ví dụ: '../images/ten_anh.jpg' nếu thư mục 'images' nằm cùng cấp với thư mục 'posts'
+        const backgroundImages = [
+            '../images/anh3.jpg', // Sử dụng ảnh đã có trong bài viết làm ví dụ
+            // Thêm các đường dẫn ảnh khác vào đây, ví dụ:
+            // '../images/background1.jpg',
+            // '../images/background2.png',
+            // '../images/nature_scene.webp' 
+            // Hãy thay thế bằng các ảnh thực tế của bạn
+        ];
+        let currentBgImageIndex = 0;
+
+        function setBodyBackground() {
+            if (backgroundImages.length === 0) {
+                console.warn("Không có ảnh nền nào được chỉ định để tự động thay đổi.");
+                return;
+            }
+            document.body.style.backgroundImage = `url('${backgroundImages[currentBgImageIndex]}')`;
+            currentBgImageIndex = (currentBgImageIndex + 1) % backgroundImages.length;
+        }
+
+        // Đảm bảo DOM đã tải hoàn toàn trước khi chạy script
+        document.addEventListener('DOMContentLoaded', function() {
+            setBodyBackground(); // Đặt ảnh nền đầu tiên khi tải trang
+            setInterval(setBodyBackground, 7000); // Thay đổi ảnh nền mỗi 7 giây (7000 mili giây)
+        });
+    </script>
 </body>
 </html>
