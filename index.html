@@ -49,6 +49,11 @@
             white-space: nowrap; /* Đảm bảo bản thân text không bị xuống dòng */
         }
 
+        /* Tạm dừng animation khi hover vào h1 */
+        #marquee-h1:hover .marquee-h1-text {
+            animation-play-state: paused;
+        }
+
         @keyframes marquee-animation-h1 {
             0%   { transform: translateX(0); }
             100% { transform: translateX(-100%); } /* Di chuyển sang trái bằng chính tổng chiều rộng của nó (bao gồm padding) */
